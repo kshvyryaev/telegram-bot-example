@@ -115,6 +115,11 @@ namespace TelegramBot.Tests
             Assert.IsNotNull(stateMachine);
             builder.CacheAdapterMock
                 .Verify(x => x.Get<IStateMachine>(It.IsAny<string>()), Times.Once);
+            builder.CacheAdapterMock
+                .Verify(x => x.Set(
+                    It.IsAny<string>(),
+                    It.IsAny<IStateMachine>(),
+                    It.IsAny<TimeSpan>()), Times.Once);
             builder.TablesUsagePolicyMock
                 .Verify(x => x.IsAvailable, Times.Once);
             builder.TablesRepositoryMock

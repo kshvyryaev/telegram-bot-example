@@ -8,13 +8,19 @@ namespace TelegramBot.Api.StateComponents
 {
     public class StateMachineManager : IStateMachineManager
     {
-        #region Fields
+        #region Constants
 
+        private const double DefaultCacheExpirationInMinutes = 3;
         private const string StateMachineTable = "StateMachineTable";
+
+        #endregion Constants
+
+        #region Fields
 
         private readonly ICacheAdapter _cache;
         private readonly ITablesRepository _tables;
         private readonly ITablesUsagePolicy _tablesUsagePolicy;
+        private readonly TimeSpan _defaultCacheExpiration;
 
         #endregion Fields
 
@@ -28,6 +34,7 @@ namespace TelegramBot.Api.StateComponents
             _cache = cacheAdapter ?? throw new ArgumentNullException(nameof(cacheAdapter));
             _tables = tablesRepository ?? throw new ArgumentNullException(nameof(tablesRepository));
             _tablesUsagePolicy = tablesUsagePolicy ?? throw new ArgumentNullException(nameof(tablesUsagePolicy));
+            _defaultCacheExpiration = TimeSpan.FromMinutes(DefaultCacheExpirationInMinutes);
         }
 
         #endregion Constructors
@@ -46,6 +53,11 @@ namespace TelegramBot.Api.StateComponents
             if (stateMachine == null && _tablesUsagePolicy.IsAvailable)
             {
                 stateMachine = await _tables.GetAsync<IStateMachine>(StateMachineTable, senderUniqueKey);
+
+                if (stateMachine != null)
+                {
+                    _cache.Set(senderUniqueKey, stateMachine, _defaultCacheExpiration);
+                }
             }
 
             return stateMachine;
@@ -58,7 +70,7 @@ namespace TelegramBot.Api.StateComponents
                 throw new ArgumentNullException(nameof(senderUniqueKey));
             }
 
-            _cache.Set(senderUniqueKey, stateMachine);
+            _cache.Set(senderUniqueKey, stateMachine, _defaultCacheExpiration);
 
             if (_tablesUsagePolicy.IsAvailable)
             {
