@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelegramBot.Api", "TelegramBot.Api\TelegramBot.Api.csproj", "{B2E76342-2F07-486E-852A-29D9CD7F457C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelegramBot.Infrastructure.Caching.Memory", "TelegramBot.Infrastructure.Caching.Memory\TelegramBot.Infrastructure.Caching.Memory.csproj", "{B5B2EC9D-6E51-4C24-82E4-917C67344E54}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelegramBot.Domain.Contracts", "TelegramBot.Domain.Contracts\TelegramBot.Domain.Contracts.csproj", "{03254EEE-5B18-44AC-A954-1AE7E1D2A2BF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelegramBot.Domain.Configuration", "TelegramBot.Domain.Configuration\TelegramBot.Domain.Configuration.csproj", "{ECE29031-0BFE-4F85-AD96-94B702C43250}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelegramBot.Infrastructure.Data.AzureTableStorage", "TelegramBot.Infrastructure.Data.AzureTableStorage\TelegramBot.Infrastructure.Data.AzureTableStorage.csproj", "{159FEB2B-E415-444E-B1B5-A55DDD242824}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{21DA623D-44F3-4A40-A4CD-2868B599DFCE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{8E1ECFCA-7C54-4AD2-8C0F-5D816505A45F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBot.Tests", "TelegramBot.Tests\TelegramBot.Tests.csproj", "{C300432D-30F0-45DA-9E04-80B1734BB67C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2E76342-2F07-486E-852A-29D9CD7F457C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2E76342-2F07-486E-852A-29D9CD7F457C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2E76342-2F07-486E-852A-29D9CD7F457C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2E76342-2F07-486E-852A-29D9CD7F457C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5B2EC9D-6E51-4C24-82E4-917C67344E54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5B2EC9D-6E51-4C24-82E4-917C67344E54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5B2EC9D-6E51-4C24-82E4-917C67344E54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5B2EC9D-6E51-4C24-82E4-917C67344E54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03254EEE-5B18-44AC-A954-1AE7E1D2A2BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03254EEE-5B18-44AC-A954-1AE7E1D2A2BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03254EEE-5B18-44AC-A954-1AE7E1D2A2BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03254EEE-5B18-44AC-A954-1AE7E1D2A2BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECE29031-0BFE-4F85-AD96-94B702C43250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECE29031-0BFE-4F85-AD96-94B702C43250}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECE29031-0BFE-4F85-AD96-94B702C43250}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECE29031-0BFE-4F85-AD96-94B702C43250}.Release|Any CPU.Build.0 = Release|Any CPU
+		{159FEB2B-E415-444E-B1B5-A55DDD242824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{159FEB2B-E415-444E-B1B5-A55DDD242824}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{159FEB2B-E415-444E-B1B5-A55DDD242824}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{159FEB2B-E415-444E-B1B5-A55DDD242824}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C300432D-30F0-45DA-9E04-80B1734BB67C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C300432D-30F0-45DA-9E04-80B1734BB67C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C300432D-30F0-45DA-9E04-80B1734BB67C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C300432D-30F0-45DA-9E04-80B1734BB67C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B5B2EC9D-6E51-4C24-82E4-917C67344E54} = {8E1ECFCA-7C54-4AD2-8C0F-5D816505A45F}
+		{03254EEE-5B18-44AC-A954-1AE7E1D2A2BF} = {21DA623D-44F3-4A40-A4CD-2868B599DFCE}
+		{ECE29031-0BFE-4F85-AD96-94B702C43250} = {21DA623D-44F3-4A40-A4CD-2868B599DFCE}
+		{159FEB2B-E415-444E-B1B5-A55DDD242824} = {8E1ECFCA-7C54-4AD2-8C0F-5D816505A45F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {081817DF-BC5E-4695-A805-F134A5657A5B}
+	EndGlobalSection
+EndGlobal
